@@ -37,6 +37,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Is __DEV__ true? {__DEV__ ? 'yes' : 'no'}</Text>
+      <Text>Update 2</Text>
       <StatusBar style='auto' />
     </View>
   );
