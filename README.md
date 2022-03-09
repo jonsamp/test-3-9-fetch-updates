@@ -9,6 +9,7 @@
 5. Run `eas update:configure`
 6. Add `channel` and `simulator.ios` properties in **eas.json** under the `preview` build profile.
 7. Create a simulator build with `eas build --profile preview --platform ios`
-
 8. Load the app and watch the network requests. Make sure there are no new updates.
 9. Publish an update, then re-focus the app. Watch network requests to see the update appear.
+
+https://user-images.githubusercontent.com/6455018/157541774-2ff5d968-1e79-411e-8c9e-3c3a6b6d505d.mov
