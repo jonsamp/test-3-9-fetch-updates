@@ -1,9 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import { StyleSheet, Text, View, AppState, AppStateStatus } from 'react-native';
+import { useEffect, useState } from 'react';
+import {
+  StyleSheet,
+  Text,
+  ScrollView,
+  AppState,
+  AppStateStatus,
+} from 'react-native';
 import * as Updates from 'expo-updates';
 
 import { helper } from './helpers';
+import { helper as helper3 } from './helpers3';
 
 export default function App() {
   helper();
@@ -13,9 +20,8 @@ export default function App() {
         const update = await Updates.checkForUpdateAsync();
 
         if (update.isAvailable) {
-          alert('Found an update that is avaiable, going to fetch and reload.');
           await Updates.fetchUpdateAsync();
-          Updates.reloadAsync();
+          await Updates.reloadAsync();
         }
       } catch (error) {
         alert(`Error fetching latest Expo update: ${error}`);
@@ -38,12 +44,12 @@ export default function App() {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text>Is __DEV__ true? {__DEV__ ? 'yes' : 'no'}</Text>
-      <Text>Update 2</Text>
-      <Text> string{JSON.stringify(helper())}</Text>
+      <Text>Update 24</Text>
+      <Text>{JSON.stringify(helper3())}</Text>
       <StatusBar style='auto' />
-    </View>
+    </ScrollView>
   );
 }
 
@@ -51,7 +57,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingVertical: 60,
+    paddingHorizontal: 32,
   },
 });
