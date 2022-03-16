@@ -3,10 +3,7 @@ import { useEffect } from 'react';
 import { StyleSheet, Text, View, AppState, AppStateStatus } from 'react-native';
 import * as Updates from 'expo-updates';
 
-import { helper } from './helpers';
-
 export default function App() {
-  helper();
   const fetchExpoUpdate = async () => {
     if (!__DEV__) {
       try {
@@ -41,7 +38,6 @@ export default function App() {
     <View style={styles.container}>
       <Text>Is __DEV__ true? {__DEV__ ? 'yes' : 'no'}</Text>
       <Text>Update 2</Text>
-      <Text> string{JSON.stringify(helper())}</Text>
       <StatusBar style='auto' />
     </View>
   );
