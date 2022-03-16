@@ -10,7 +10,6 @@ export default function App() {
         const update = await Updates.checkForUpdateAsync();
 
         if (update.isAvailable) {
-          alert('Found an update that is avaiable, going to fetch and reload.');
           await Updates.fetchUpdateAsync();
           Updates.reloadAsync();
         }
@@ -37,7 +36,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Is __DEV__ true? {__DEV__ ? 'yes' : 'no'}</Text>
-      <Text>Update 2</Text>
+      <Text>Update 8</Text>
       <StatusBar style='auto' />
     </View>
   );

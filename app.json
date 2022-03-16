@@ -12,11 +12,10 @@
     },
     "updates": {
       "fallbackToCacheTimeout": 0,
-      "url": "https://u.expo.dev/d86ddf92-6593-49b5-98fa-04c56f04cc0d"
+      "url": "https://u.expo.dev/d86ddf92-6593-49b5-98fa-04c56f04cc0d",
+      "checkAutomatically": "ON_ERROR_RECOVERY"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.jonsamp.test39fetchupdates"
